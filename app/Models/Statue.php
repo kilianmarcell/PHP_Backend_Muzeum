@@ -16,5 +16,7 @@ class Statue extends Model
         'person',
         'height',
         'price',
+        'created_at',
+        'updated_at'
     ];
 }

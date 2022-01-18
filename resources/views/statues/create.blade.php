@@ -8,6 +8,8 @@
 </head>
 <body>
     <h1>New statue</h1>
+
+    <p><a href="{{ route('home') }}">Vissza a főoldalra</a></p>
     <form method='POST' action="{{ route('statues.store') }}">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div>

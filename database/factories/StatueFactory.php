@@ -16,7 +16,7 @@ class StatueFactory extends Factory
         return [
             'person' => $this->faker->name(),
             'height' => $this->faker->numberBetween(30, 200),
-            'price' => $this->faker->numberBetween(10, 500) * 1000,
+            'price' => $this->faker->numberBetween(10, 500) * 1000
         ];
     }
 }

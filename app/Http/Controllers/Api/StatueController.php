@@ -15,8 +15,8 @@ class StatueController extends Controller
      */
     public function index()
     {
-        $paintings = Statue::all();
-        return response()->json($paintings);
+        $statues = Statue::all();
+        return response()->json($statues);
     }
 
     /**
