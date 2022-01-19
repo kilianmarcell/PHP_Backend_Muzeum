@@ -36,6 +36,14 @@ class StatueController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'person' => 'required|min:5',
+            'height' => 'required|numeric|min:0|max:250',
+        ]);
+
+        var_dump($validated);
+        exit();
+
         $adatok = $request->only(['person', 'height', 'price']);
         $statue = new Statue();
         $statue->fill($adatok);
@@ -88,6 +96,7 @@ class StatueController extends Controller
      */
     public function destroy(Statue $statue)
     {
-        //
+        $statue->delete();
+        return redirect()->route('statues.index');
     }
 }
