@@ -62,7 +62,7 @@ class StatueController extends Controller
      */
     public function edit(Statue $statue)
     {
-        //
+        return view('statues.edit', [ 'statue' => $statue ]);
     }
 
     /**
@@ -74,7 +74,10 @@ class StatueController extends Controller
      */
     public function update(Request $request, Statue $statue)
     {
-        //
+        $adatok = $request->only(['person', 'height', 'price']);
+        $statue->fill($adatok);
+        $statue->save();
+        return redirect()->route('statues.show', $statue->id);
     }
 
     /**
