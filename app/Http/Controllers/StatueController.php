@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StatueRequest;
 use App\Models\Statue;
 use Illuminate\Http\Request;
 
@@ -34,16 +35,8 @@ class StatueController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StatueRequest $request)
     {
-        $validated = $request->validate([
-            'person' => 'required|min:5',
-            'height' => 'required|numeric|min:0|max:250',
-        ]);
-
-        var_dump($validated);
-        exit();
-
         $adatok = $request->only(['person', 'height', 'price']);
         $statue = new Statue();
         $statue->fill($adatok);
@@ -80,7 +73,7 @@ class StatueController extends Controller
      * @param  \App\Models\Statue  $statue
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Statue $statue)
+    public function update(StatueRequest $request, Statue $statue)
     {
         $adatok = $request->only(['person', 'height', 'price']);
         $statue->fill($adatok);
