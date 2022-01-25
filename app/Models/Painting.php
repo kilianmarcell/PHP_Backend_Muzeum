@@ -20,6 +20,8 @@ class Painting extends Model
         'title',
         'year',
         'on_display',
+        'created_at',
+        'updated_at'
     ];
 
     protected $casts = [
