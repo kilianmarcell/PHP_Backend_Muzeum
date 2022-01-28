@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create statue</title>
+    <link rel="stylesheet" href="{{ mix('css/form.css') }}">
 </head>
 <body>
     <h1>New statue</h1>

@@ -1,0 +1,6 @@
+npm install
+npm run dev
+npm run watch (olyan mint a dev, folyamatosan figyeli a változásokat)
+ha webpack.mix.js fájlban változtatunk npm run watch reset...
+npm run production (run watch + minimalizálja a css fájlt)
+npm install --save bootstrap

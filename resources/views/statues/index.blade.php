@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <title>Document</title>
 </head>
-<body>
+<body class="bg-danger">
     <p><a href="{{ route('home') }}">Vissza a főoldalra</a></p>
 
     <table>
@@ -26,7 +27,7 @@
                 <form method="POST" action="{{ route('statues.destroy', $statue->id) }}">
                     @csrf
                     @method('DELETE')
-                    <button type="submit">Törlés</button>
+                    <button class="btn btn-dark" type="submit">Törlés</button>
                 </form>
             </td>
         </tr>

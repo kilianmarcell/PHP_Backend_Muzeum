@@ -1,0 +1,13 @@
+html, body {
+    background-color: rgb(61, 56, 56);
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+a {
+    color: aqua;
+}
+
+a:visited {
+    color: coral;
+}
