@@ -17,11 +17,7 @@
             <td>{{ $statue->height }}</td>
             <td>{{ $statue->price }}</td>
             <td>
-                <form method="POST" action="{{ route('statues.destroy', $statue->id) }}">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-dark" type="submit">Törlés</button>
-                </form>
+                @include('delete-statue-button', ['statue' => $statue])
             </td>
         </tr>
     @endforeach
