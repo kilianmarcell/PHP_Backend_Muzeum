@@ -1,0 +1,1 @@
+{"version":3,"file":"css/form.css","mappings":"AAAA,UACI,wBACJ,CAEA,KACI,qBACJ,C","sources":["webpack:///./resources/css/form.css"],"sourcesContent":["html, body {\r\n    background-color: rgb(61, 56, 56);\r\n}\r\n\r\nform {\r\n    border: 1px solid white;\r\n}\r\n"],"names":[],"sourceRoot":""}
